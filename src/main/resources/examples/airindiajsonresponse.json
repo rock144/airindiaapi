@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 101,
+    "airlineName": "AirIndia",
+    "fCode": "IND101",
+    "fromAirportCode": "HYD",
+    "toAirportCode": "BLR",
+    "departureDate": "27/12/2019",
+    "emptySeats": 0,
+    "totalSeats": 200,
+    "price": 199,
+    "planeType": "airlIndia 737"
+  },
+  {
+    "Id": 102,
+    "airlineName": "airlIndia",
+    "fCode": "IND102",
+    "fromAirportCode": "HYD",
+    "toAirportCode": "BLR",
+    "departureDate": "27/12/2019",
+    "emptySeats": 24,
+    "totalSeats": 350,
+    "price": 450,
+    "planeType": "airlIndia 747"
+  },
+  {
+    "Id": 103,
+    "airlineName": "airlIndia",
+    "fCode": "IND103",
+    "fromAirportCode": "HYD",
+    "toAirportCode": "BLR",
+    "departureDate": "27/12/2019",
+    "emptySeats": 33,
+    "totalSeats": 400,
+    "price": 450,
+    "planeType": "airlIndia 757"
+  }
+]

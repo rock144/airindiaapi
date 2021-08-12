@@ -1,0 +1,56 @@
+#%RAML 1.0
+title: AirIndiaapi
+baseUri: http://localhost:8081/api
+
+/AirIndiaFlights:
+ get:
+  queryParameters:
+    source:
+      example: HYD
+    destination:
+      example: BLR     
+    doj: 
+      example: 18-07-2020
+  responses:
+   200:
+     body:
+       application/json:
+        example:
+                      [
+                          {
+                              "Id": "201",
+                              "airlineName": "AirIndia",
+                              "fCode": "AI201",
+                              "fromAirportCode": "HYD",
+                              "toAirportCode": "BLR",
+                              "departureDate": "19-07-2020",
+                              "emptySeats": "0",
+                              "totalSeats": 200,
+                              "price": "199",
+                              "planeType": "AirIndia 737"
+                          },
+                          {
+                              "Id": "202",
+                              "airlineName": "AirIndia",
+                              "fCode": "AI202",
+                              "fromAirportCode": "HYD",
+                              "toAirportCode": "BLR",
+                              "departureDate": "19-07-2020",
+                              "emptySeats": "24",
+                              "totalSeats": 350,
+                              "price": "450",
+                              "planeType": "AirIndia 747"
+                          },
+                          {
+                              "Id": "203",
+                              "airlineName": "AirIndia",
+                              "fCode": "AI203",
+                              "fromAirportCode": "HYD",
+                              "toAirportCode": "BLR",
+                              "departureDate": "19-07-2020",
+                              "emptySeats": "33",
+                              "totalSeats": 400,
+                              "price": "450",
+                              "planeType": "AirIndia 757"
+                          }
+                      ]

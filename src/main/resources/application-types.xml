@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="AlirIndia" format="json">
+      <types:shape format="weave" example="examples/airindiajsonresponse.json"><![CDATA[%dw 2.0
+
+type AlirIndia = Array<{|  Id: Number {"typeId": "int"},   airlineName: String,   fCode: String,   fromAirportCode: String,   toAirportCode: String,   departureDate: String,   emptySeats: Number {"typeId": "int"},   totalSeats: Number {"typeId": "int"},   price: Number {"typeId": "int"},   planeType: String|}> {"example": "[{\\\"Id\\\":101,\\\"airlineName\\\":\\\"AirIndia\\\",\\\"fCode\\\":\\\"IND101\\\",\\\"fromAirportCode\\\":\\\"HYD\\\",\\\"toAirportCode\\\":\\\"BLR\\\",\\\"departureDate\\\":\\\"27\\/12\\/2019\\\",\\\"emptySeats\\\":0,\\\"totalSeats\\\":200,\\\"price\\\":199,\\\"planeType\\\":\\\"airlIndia 737\\\"},{\\\"Id\\\":102,\\\"airlineName\\\":\\\"airlIndia\\\",\\\"fCode\\\":\\\"IND102\\\",\\\"fromAirportCode\\\":\\\"HYD\\\",\\\"toAirportCode\\\":\\\"BLR\\\",\\\"departureDate\\\":\\\"27\\/12\\/2019\\\",\\\"emptySeats\\\":24,\\\"totalSeats\\\":350,\\\"price\\\":450,\\\"planeType\\\":\\\"airlIndia 747\\\"},{\\\"Id\\\":103,\\\"airlineName\\\":\\\"airlIndia\\\",\\\"fCode\\\":\\\"IND103\\\",\\\"fromAirportCode\\\":\\\"HYD\\\",\\\"toAirportCode\\\":\\\"BLR\\\",\\\"departureDate\\\":\\\"27\\/12\\/2019\\\",\\\"emptySeats\\\":33,\\\"totalSeats\\\":400,\\\"price\\\":450,\\\"planeType\\\":\\\"airlIndia 757\\\"}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#e1972366-2ead-4b50-851c-2c8794f4e21d">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="AlirIndia"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
