@@ -30,7 +30,25 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				</configuration>
+				
+				<cloudHubDeployment>
+			      <uri>https://anypoint.mulesoft.com</uri>
+			      
+			      <username>lokesh143</username>
+			      <password>Lokesh143</password>
+			      <environment>DEV</environment>
+			      <applicationName>airindiaapi-cloud</applicationName>
+			      <muleVersion>4.3.0</muleVersion>
+			      <workers>1</workers>
+			      <workers>MICRO</workers>
+			      <objectStoreV2></objectStoreV2>
+			      
+			      
+			      
+			    </cloudHubDeployment>
+			  
+				<classifier>mule-application</classifier>
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>
